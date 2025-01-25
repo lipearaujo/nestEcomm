@@ -60,7 +60,7 @@ const CartContextProvider = ({ children }: ProviderProps) => {
 
     for (const item in itens) {
       if (itens[item] > 0) {
-        let itemInfo: Product = data?.find(
+        let itemInfo: Product | any = data?.find(
           (product: Product) => product.id === item
         );
 
