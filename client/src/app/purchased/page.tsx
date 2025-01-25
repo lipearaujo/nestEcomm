@@ -9,7 +9,9 @@ type Props = {};
 
 const PurchasedItems = (props: Props) => {
   const { purchasedItems } = useGetPurchasedItems(
-    localStorage.getItem("userId") as string
+    typeof window !== "undefined"
+      ? (window.localStorage.getItem("userId") as string)
+      : ""
   );
 
   return (
