@@ -24,7 +24,10 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:3001/users/register", register);
+      await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}/users/register`,
+        register
+      );
     } catch (error) {
       console.log(error);
     }
@@ -97,7 +100,7 @@ const Login = () => {
 
     try {
       await axios
-        .post("http://localhost:3001/users/login", login)
+        .post(`${process.env.NEXT_PUBLIC_API_URL}/users/login`, login)
         .then((response) => {
           console.log(response.data);
           createCookie(response.data.access_token);

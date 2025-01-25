@@ -8,7 +8,7 @@ export function useGetPurchasedItems(customerId: string) {
 
   const fetchProducts = async () => {
     const purchasedItems = await axios.get(
-      `http://localhost:3001/products/purchasedItems/${customerId}`
+      `${process.env.NEXT_PUBLIC_API_URL}/products/purchasedItems/${customerId}`
     );
     setPurchasedItems(purchasedItems.data.PurchasedItems);
   };

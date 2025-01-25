@@ -18,19 +18,23 @@ const FilteredProducts = (props: Props) => {
     try {
       if (props.type === 0) {
         await axios
-          .get("http://localhost:3001/products")
+          .get(`${process.env.NEXT_PUBLIC_API_URL}/products`)
           .then((response) => setFilteredProducts(response.data));
       }
 
       if (props.type === 1) {
         await axios
-          .get("http://localhost:3001/products/category/electronics")
+          .get(
+            `${process.env.NEXT_PUBLIC_API_URL}/products/category/electronics`
+          )
           .then((response) => setFilteredProducts(response.data));
       }
 
       if (props.type === 2) {
         await axios
-          .get("http://localhost:3001/products/category/peripherals")
+          .get(
+            `${process.env.NEXT_PUBLIC_API_URL}/products/category/peripherals`
+          )
           .then((response) => setFilteredProducts(response.data));
       }
 

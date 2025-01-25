@@ -8,7 +8,7 @@ import { useDeferredValue } from "react";
 const API_URL = process.env.NEXT_PUBLIC_API_URL as string;
 
 const fetcher = (): AxiosPromise<[]> => {
-  return axios.get(`http://localhost:3001/products`);
+  return axios.get(`${process.env.NEXT_PUBLIC_API_URL}/products`);
 };
 
 export function useProducts() {

@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios, { AxiosPromise } from "axios";
 
 const fetcher = (id: string): AxiosPromise => {
-  return axios.get(`http://localhost:3001/products/${id}`);
+  return axios.get(`${process.env.NEXT_PUBLIC_API_URL}/products/${id}`);
 };
 
 export function useSingleProduct(id: string) {

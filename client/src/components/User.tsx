@@ -14,7 +14,11 @@ const User = (props: Props) => {
     const token = cookies;
     try {
       await axios
-        .get(`http://localhost:3001/users/${localStorage.getItem("userId")}`)
+        .get(
+          `${process.env.NEXT_PUBLIC_API_URL}/users/${localStorage.getItem(
+            "userId"
+          )}`
+        )
         .then((response) => {
           setUser(response.data.username);
         });

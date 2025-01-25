@@ -78,7 +78,10 @@ const CartContextProvider = ({ children }: ProviderProps) => {
     };
 
     try {
-      await axios.post("http://localhost:3001/products/checkout", body);
+      await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}/products/checkout`,
+        body
+      );
 
       setItens({});
       router.push("/");
