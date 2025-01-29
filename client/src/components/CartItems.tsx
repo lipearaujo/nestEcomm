@@ -1,6 +1,7 @@
 "use client";
 import useCart from "@/hooks/useCart";
 import { Product } from "@/types/products";
+import Image from "next/image";
 import React, { useState } from "react";
 
 type Props = {
@@ -19,6 +20,12 @@ const CartItems = (props: Props) => {
         <div className="bg-white shadow-xl shadow-zinc-600 w-2/3 h-60 rounded-md flex gap-5">
           <div className="w-1/3 flex items-center justify-center">
             <div className="bg-zinc-900 w-[90%] h-[90%] rounded-md">photo</div>
+            {/*          <Image
+              src={props.product?.imageURL}
+              width={100}
+              height={100}
+              alt={props.product?.name}
+            /> */}
           </div>
           <div className="flex-1 flex flex-col gap-4 items-center justify-center">
             <h3 className="font-extrabold text-2xl">{props.product?.name}</h3>
