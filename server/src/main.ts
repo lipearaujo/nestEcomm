@@ -4,7 +4,7 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: '*', // Allowed origins
+    origin: 'https://nest-ecomm-nq1i.vercel.app', // Allowed origins
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed methods
     credentials: true, // Allow credentials (e.g., cookies)
     allowedHeaders:
