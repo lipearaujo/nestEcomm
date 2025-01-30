@@ -12,8 +12,6 @@ async function bootstrap() {
     ], // Allowed origins
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed methods
     credentials: true, // If you need to send cookies/credentials
-    allowedHeaders:
-      'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version', // Allowed headers
   });
 
   await app.listen(3001);
