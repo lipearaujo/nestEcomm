@@ -7,8 +7,6 @@ async function bootstrap() {
   app.enableCors({
     origin: [
       'https://nest-ecomm-nq1i.vercel.app/',
-      'https://nest-ecomm-nq1i-git-master-lipearaujos-projects.vercel.app/',
-      'https://nest-ecomm-nq1i-9d8c0aqhw-lipearaujos-projects.vercel.app/',
     ], // Allowed origins
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed methods
     credentials: true, // If you need to send cookies/credentials
