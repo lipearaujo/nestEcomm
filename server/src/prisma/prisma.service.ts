@@ -7,7 +7,7 @@ export class PrismaService extends PrismaClient {
   // The constructor is where you can pass options to the underlying PrismaClient
   // or use driver adapters if needed (e.g., for serverless environments).
   constructor() {
-    super();
+    super({});
   }
 
   async onModuleInit() {
